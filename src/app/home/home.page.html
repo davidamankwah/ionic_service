@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Movie App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Movie App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let movie of movieData">
+      <ion-item-group>
+        <img src="{{movie.Poster}}">
+        <ion-label>
+          {{movie.Title}}
+        </ion-label>
+        <ion-label>
+          {{movie.Year}}
+        </ion-label>
+      </ion-item-group>
+    </ion-item>
+  </ion-list>
+
+  <ion-card *ngFor="let movie of movieData">
+    <img src="{{movie.Poster}}">
+    <ion-card-header>
+      <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+      <ion-card-title> {{movie.Title}}</ion-card-title>
+    </ion-card-header>
+  
+  </ion-card>
+
+
+ 
+</ion-content>
